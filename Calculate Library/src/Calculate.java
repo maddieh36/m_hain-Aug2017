@@ -35,8 +35,17 @@ public class Calculate {
 		return discriminant;
 	}
 	
-	public static void toImproperFrac (int num1, int num2, int num3) {
-		double improperFrac = (num1*num3) + num2;
+	public static String toImproperFrac (int num1, int num2, int num3) {
+		int improperFrac = (num1*num3) + num2;
+		return improperFrac + "/" + num3;
+	}
+
+	public static String toMixedNum (int topNum, int bottomNum) {
+		int mixedNum = topNum/bottomNum;
+		return mixedNum + " " + topNum%bottomNum + "/" + bottomNum;
+	}
+	
+	public static String foil (int a, int b, int c, int d, string letter) {
 		
 	}
 }
