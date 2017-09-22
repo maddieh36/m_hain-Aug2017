@@ -45,10 +45,17 @@ public class Calculate {
 		return mixedNum + " " + topNum%bottomNum + "/" + bottomNum;
 	}
 	
-	public static String foil (int a, int b, int c, int d, string letter) {
+	public static String foil (int a, int b, int c, int d, String letter) {
 		int firstTerm = a * c;
 		int secondTerm = b + d;
 		int thirdTerm = b * d;
-		String foil = first Term + letter + "^2" + " + " secondTerm + letter + " + " + thirdTerm;
+		String foil = firstTerm + letter + "^2" + " + " + secondTerm + letter + " + " + thirdTerm;
+		return foil;
 	}
+	
+	public static boolean isDivisibleBy (int a, int b) {
+		boolean divisible = a % b == 0;
+		return divisible;
+	}
+
 }
