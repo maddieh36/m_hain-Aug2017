@@ -46,6 +46,9 @@ public class Calculate {
 	}
 	
 	public static String foil (int a, int b, int c, int d, string letter) {
-		
+		int firstTerm = a * c;
+		int secondTerm = b + d;
+		int thirdTerm = b * d;
+		String foil = first Term + letter + "^2" + " + " secondTerm + letter + " + " + thirdTerm;
 	}
 }
