@@ -4,18 +4,11 @@ public class Split {
 
 	public static void main(String[] args) {
 
-		String apples = "I like apples!";
-		String[] applesString = apples.split(" ");
-		System.out.println(Arrays.toString(applesString));
+		System.out.println(Arrays.toString("I like apples!".split(" ")));
 		
-		String manyApples = "I really like really red apples";
-		String[] manyApplesString = manyApples.split("really");
-		System.out.println(Arrays.toString(manyApplesString));
+		System.out.println(Arrays.toString("I really like really red apples".split("really")));
 		
-		String reallyApples = "I reallyreally like apples";
-		String[] reallyApplesString = reallyApples.split("really");
-		System.out.println(Arrays.toString(reallyApplesString));
-		
+		System.out.println(Arrays.toString("I reallyreally like apples".split("really")));
 		
 		
 		//String.split();

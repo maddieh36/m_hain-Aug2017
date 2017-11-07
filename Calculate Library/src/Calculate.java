@@ -66,6 +66,14 @@ public class Calculate {
 			return a;
 		}
 	}
+	
+	public static double max (double a, double b) {
+		if (a > b) {
+			return a;
+		} else {
+			return b;
+		}
+	}
 
 	public static double max (double a, double b, double c) {
 		if (a > b && a > b) {
@@ -127,7 +135,15 @@ public class Calculate {
 		}
 	}
 	
-//	public static int gcf (int a, int b) {
-		
-//	}
+	public static int gcf (int a, int b) {
+		int n = (int) max(a, b);
+		if(isPrime(a) || isPrime(b)) {
+			return 1;
+		} else {
+			while (!isDivisibleBy(a, n) || (!isDivisibleBy (b, n))) {
+				n--;
+			}
+			return n;
+		}
+	}
 }
