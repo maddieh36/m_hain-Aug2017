@@ -146,4 +146,8 @@ public class Calculate {
 			return n;
 		}
 	}
+	
+	public static double sqrt (double a) {
+		
+	}
 }
