@@ -148,6 +148,13 @@ public class Calculate {
 	}
 	
 	public static double sqrt (double a) {
-		
+		 double firstGuess = a/10;
+		 while firstGuess * firstGuess > a + 0.5 || firstGuess * firstGuess < a - 0.05){
+			 double squareRoot = 0.5 * (a/firstGuess + firstGuess);
+			 firstGuess = squareRoot;
+		 }
+		 return round2(firstGuess);
 	}
+	
+	
 }
