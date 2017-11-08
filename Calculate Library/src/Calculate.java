@@ -58,4 +58,96 @@ public class Calculate {
 		return divisible;
 	}
 
+	public static double absValue (double a) {
+		if (a < 0) {
+			a *= -1;
+			return a;
+		} else {
+			return a;
+		}
+	}
+	
+	public static double max (double a, double b) {
+		if (a > b) {
+			return a;
+		} else {
+			return b;
+		}
+	}
+
+	public static double max (double a, double b, double c) {
+		if (a > b && a > b) {
+			return a;
+		} else if (b > a && b > c) {
+			return b;
+		} else {
+			return c;
+		}
+	}
+	
+	public static int min (int a, int b) {
+		if (a < b) {
+			return a;
+		} else {
+			return b;
+		}
+	}
+	
+	public static double round2 (double a) {
+		double result = 0.0;
+		
+		int tempInt = (int)(a * 1000);
+		int roundNum = tempInt % 10;
+		tempInt = tempInt / 10;
+		if (roundNum >= 5 && tempInt > 0)
+			tempInt++;
+		else if(roundNum <= -5 && tempInt < 0)
+			tempInt--;
+		result = tempInt / 100.0;
+		return result;
+	}
+	
+	public static double exponent (double a, int b) {
+		double result = 1;
+		for (int i = 0; i < b; i++) {
+			result *= a;
+		}
+		return result;
+	}
+	
+	public static int factorial (int a) {
+		int result = 1;
+		for (int i = 1; i <= a; i++) {
+			result = result *= i;
+		}
+		return result;
+	}
+	
+	public static boolean isPrime (int a) {
+		int factor = 2;
+		while(!isDivisibleBy (a, factor)) {
+			factor++;
+		}
+		if(factor == a) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static int gcf (int a, int b) {
+		int n = (int) max(a, b);
+		if(isPrime(a) || isPrime(b)) {
+			return 1;
+		} else {
+			while (!isDivisibleBy(a, n) || (!isDivisibleBy (b, n))) {
+				n--;
+			}
+			return n;
+		}
+	}
+	
+	public static double sqrt (double a) {
+		
+	}
 }
