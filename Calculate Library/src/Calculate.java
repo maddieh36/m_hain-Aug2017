@@ -148,6 +148,27 @@ public class Calculate {
 	}
 	
 	public static double sqrt (double a) {
-		
+		 double firstGuess = a/10;
+		 while firstGuess * firstGuess > a + 0.5 || firstGuess * firstGuess < a - 0.05){
+			 double squareRoot = 0.5 * (a/firstGuess + firstGuess);
+			 firstGuess = squareRoot;
+		 }
+		 return round2(firstGuess);
 	}
+	
+	public static String quadForm(int a, int b, int c) {
+		if (discriminant(a, b, c) < 0) {
+			return "There are no real roots.";
+		} else if(discriminant(a, b, c) == 0) {
+			double singleRoot = round2(-b/(double)(2 * a));
+			String quadForm = "(" + singleRoot + " , " + "0";
+			return quadForm;
+		} else {
+			double positiveQuad = round2((-b + (sqrt(discriminant(a, b, c))))/(2*a));
+			double negativeQuad = round2((-b - (sqrt(discriminant(a, b, c))))/(2*a));
+			String quadForm = "(" + negativeQuad + ", 0" + ") and (" + positiveQuad + ", 0)";
+			return quadForm;
+		}
+	}
+	
 }
