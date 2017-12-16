@@ -6,6 +6,8 @@ import java.util.Scanner;
 //November 7, 2017
 //This code takes in an input of a equation, and returns the second operand.
 public class FracCalc {
+	
+	
 
     public static void main(String[] args) {
         // TODO: Read the input from the user and call produceAnswer with an equation
